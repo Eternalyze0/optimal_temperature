@@ -1,6 +1,14 @@
 # Optimal Temperature
 Follows https://arxiv.org/pdf/2605.08505.
 
+## Code Change To Original Model.py
+
+Just 2 lines were added:
+```py
+kappa = 10.0
+logits = self.lm_head(x) * (kappa * (torch.arange(1, x.size(1)+1, device=x.device) ** (2/(self.config.block_size-1)))).view(1, -1, 1)
+```
+
 ## Usage
 ```
 git clone karpathy's nanogpt
