@@ -1,5 +1,5 @@
 # Optimal Temperature
-Follows https://arxiv.org/pdf/2605.08505.
+Follows https://arxiv.org/pdf/2605.08505 to compute the optimal temperature at a per token level. This means the logits are rescaled by a new temperature for each subsequent token in the sequence.
 
 ## Code Change To Original Model.py
 
